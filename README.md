@@ -1,3 +1,15 @@
+
+React/redux/webpack
+Socket.io
+PgSQL
+Express
+
+Env: Nodejs v10.15.3 LTS, npm 6.4.1
+
+*minEnv Node v8 LTS
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
