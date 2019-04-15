@@ -1,26 +1,30 @@
 import React from 'react'
+import { selectedTopic } from '../../containers/Actions'
+import { connect } from 'react-redux'
 
-export default function List(props) {
+import { generateActionButton } from '../../tools'
 
-  const { titles, categories, payload } = props
-  console.log('props', payload, categories)
-  const handleClick = (e) => console.log(e.target.name)
+const List = props => {
+
+  const { titles, categories, payload, dispatch } = props
+
+  const handleClick = topic => console.log(topic)
 
   if (titles.length === 0) return 'No items in the list'
 
-
-  const createListTopics = Topic => (
-    <button
-      key={Topic}
-      onClick={handleClick}
-      >
-       {Topic}
-     </button>
+  const createListTopics = topic => (
+    <li key={topic}>
+      { generateActionButton({ name: topic, action: {type:'SUM', payload: topic}, dispatch}) }
+   </li>
   )
 
   return (
     <ul>
       { titles.map( createListTopics ) }
     </ul>
-  );
+  )
 }
+
+const mapStateToProps = state => state
+
+export default connect(mapStateToProps)(List)

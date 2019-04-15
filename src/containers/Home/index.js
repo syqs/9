@@ -3,12 +3,14 @@ import { generateRelocationButton } from '../../tools'
 
 const actionBar = {
   startNewGame: 'newgame',
-  destroyInternet: 'quit'
+  destroyInternet: 'quit',
+  destroyInternet1: 'quit1',
+
 }
 
 const keys = Object.keys(actionBar)
-const config = keys.map(k => {return { name: k, location: actionBar[k], key:k }})
-console.log(config)
+const config = keys.map( k => { return { name: k, location: actionBar[k], key:k } } )
+
 
 const genActionToolbar = config =>
   config.map(generateRelocationButton)
@@ -18,7 +20,7 @@ export default function Home(props) {
   return (
     <div>
       <h1> Hello Player 1</h1>
-      {genActionToolbar(config)}
+      { genActionToolbar(config) }
     </div>
   );
 

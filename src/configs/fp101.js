@@ -213,5 +213,3 @@ const konj = (str) =>
   // .map(r => r.map(kupus))
   .inspect()
   .fold()
-
-konj('konjski')
