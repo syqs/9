@@ -24,5 +24,7 @@
 [context.feature]
   command = "make feature"
 
-# [context."features/branch"]
-#   command = "gulp"
+[context."konj"]
+  command = "yarn test"
+  command = "yarn build"
+  command = "echo Good job bro"
