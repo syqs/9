@@ -6,9 +6,16 @@ export function updateList(payload){
 }
 
 export function selectedTopic(payload){
-  console.log('sadf',payload)
   return {
     type:'SELECTED_TOPIC',
+    payload
+  }
+}
+
+export function userQuit(payload){
+  console.log('sadf',payload)
+  return {
+    type:'USER_QUIT',
     payload
   }
 }

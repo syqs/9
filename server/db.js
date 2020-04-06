@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const sequelize = new Sequelize('db','me','root', {dialect:'postgres'})
+const sequelize = new Sequelize('db','me','root', {dialect:'sqlite3'})
 const Task = require('data.task');
 
 const Question = sequelize.define('Question', {
