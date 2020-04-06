@@ -25,6 +25,4 @@
   command = "make feature"
 
 [context."konj"]
-  command = "yarn test"
-  command = "yarn build"
-  command = "echo Good job bro"
+  command = "yarn test && yarn build && echo Good job bro"
