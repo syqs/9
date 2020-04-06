@@ -19,7 +19,7 @@ export default function Home(props) {
   // this.state = {konj:1}
   return (
     <div>
-      <h1> Hello Player 1 {this.state.konj}</h1> <button onclick={()=>this.setState({konj:23})}>CLIASK</button>
+      <h1> Hello Player 1 hello</h1> <button onclick={()=>this.setState({konj:23})}>CLIASK</button>
       { genActionToolbar(config) }
     </div>
   );
